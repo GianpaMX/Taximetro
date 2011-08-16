@@ -16,5 +16,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 				'action'    => 'index'
 			))
 		);
+
+        $router->addRoute('android', new Zend_Controller_Router_Route('android/:module/:controller/:action/*', array(
+				'format'	=> 'android',
+				'module'	=> 'default',
+				'controller'=> 'index',
+				'action'    => 'index'
+			))
+		);
 	}
 }
